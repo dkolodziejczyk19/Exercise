@@ -256,6 +256,20 @@ footer {
 	}
 }
 
+@media (min-width: 280px) {
+	nav {
+		.nav-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.nav-item {
+			font-size: 14px;
+		}
+	}
+}
+
 @media (min-width: 768px) {
 	.aboutus {
 		.row {
@@ -284,6 +298,14 @@ footer {
 }
 
 @media (min-width: 568px) {
+	nav {
+		.nav-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
 	.aboutus {
 		.row {
 			height: 100%;
