@@ -48,7 +48,7 @@ nav {
 	}
 
 	.nav-item {
-		display: none;
+		display: block;
 		padding: 0 20px;
 		line-height: 57px;
 		color: #777;
@@ -64,6 +64,7 @@ nav {
 	}
 
 	.hamburger-menu {
+		display: none;
 		padding: 14px;
 		background: none;
 		border: none;
@@ -100,7 +101,7 @@ header {
 		top: 0;
 		width: 100%;
 		height: 100%;
-		background-color: rgba(0, 0, 0, 0.8);
+		background-color: rgba(0, 0, 0, 0.6);
 		z-index: 1;
 	}
 
@@ -128,15 +129,15 @@ header {
 	}
 
 	i {
-		padding: 10px 15px;
-		border: 2px solid rgb(113, 140, 221);
+		padding: 10px;
+		border: 2px solid rgb(28, 28, 28);
 		border-radius: 50%;
 		transition: border 0.3s;
 		font-size: 20px;
 		color: #fff;
 	}
 	i:hover {
-		border: 2px solid royalblue;
+		border: 2px solid rgb(104, 105, 105);
 	}
 }
 
@@ -144,6 +145,7 @@ header {
 	color: #fff;
 	position: relative;
 	background-image: url('../img/aboutus-small.jpg');
+	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	z-index: 0;
@@ -322,6 +324,7 @@ footer {
 		display: flex;
 		align-items: center;
 		justify-content: space-around;
+		background-image: url('../img/aboutus-big.jpg');
 
 		.row {
 			flex-direction: row;
