@@ -1,0 +1,342 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 60px;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #333;
+}
+
+a {
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+h2 {
+	text-transform: uppercase;
+}
+
+.underline {
+	width: 60px;
+	height: 5px;
+	margin: 0 30px;
+	background-color: royalblue;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #ddd;
+	z-index: 5;
+
+	.nav-menu {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		height: 60px;
+	}
+
+	.nav-item {
+		display: none;
+		padding: 0 20px;
+		line-height: 57px;
+		color: #777;
+		border-bottom: 3px solid transparent;
+		transition: border-bottom linear 0.3s;
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.nav-item:hover {
+		color: #222;
+		border-bottom: 3px solid royalblue;
+	}
+
+	.hamburger-menu {
+		padding: 14px;
+		background: none;
+		border: none;
+		font-size: 30px;
+		color: #333;
+		transition: background-color, color linear 0.5s;
+		cursor: pointer;
+	}
+	.hamburger-menu:hover {
+		background-color: #333;
+		color: #ddd;
+	}
+}
+
+header {
+	color: #fff;
+	margin-top: 60px;
+
+	.hero-image {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-image: url('../img/mountain-small.jpg');
+		background-attachment: fixed;
+		background-position: center;
+		background-size: cover;
+		z-index: 0;
+	}
+
+	.hero-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.8);
+		z-index: 1;
+	}
+
+	.hero-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		z-index: 2;
+	}
+
+	h2 {
+		font-size: 30px;
+		color: #ddd;
+		margin-bottom: 5px;
+	}
+
+	span {
+		color: royalblue;
+	}
+
+	p {
+		font-size: 18px;
+		text-align: center;
+		margin: 10px 20px;
+	}
+
+	i {
+		padding: 10px 15px;
+		border: 2px solid rgb(113, 140, 221);
+		border-radius: 50%;
+		transition: border 0.3s;
+		font-size: 20px;
+		color: #fff;
+	}
+	i:hover {
+		border: 2px solid royalblue;
+	}
+}
+
+.aboutus {
+	color: #fff;
+	position: relative;
+	background-image: url('../img/aboutus-small.jpg');
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+	height: 100vh;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: 1;
+	}
+
+	.row {
+		display: flex;
+		width: 100%;
+		height: 80vh;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+	}
+
+	.card {
+		margin-top: 20px;
+		padding: 10px 20px;
+		z-index: 2;
+	}
+
+	i {
+		margin: 5px;
+		font-size: 36px;
+	}
+
+	.fa-facebook {
+		color: royalblue;
+	}
+
+	.fa-square-instagram {
+		color: rgba($color: #bf46a1, $alpha: 1);
+	}
+
+	.fa-square-snapchat {
+		color: gold;
+	}
+
+	.aboutus-card-title {
+		text-transform: uppercase;
+		margin: 10px 0px;
+		font-size: 18px;
+	}
+
+	.aboutus-card-text {
+		font-size: 16px;
+		margin: 10px;
+	}
+}
+
+.contact {
+	display: flex;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+	background: #333;
+	background-image: radial-gradient(#222, #222, #222, #222, #222);
+
+	.contact-us {
+		color: #ddd;
+		padding: 20px 20px;
+		border-radius: 3px;
+		border-left: 5px solid #ddd;
+	}
+
+	.social-media {
+		width: 100%;
+		color: #ddd;
+		border-left: 5px solid #ddd;
+	}
+
+	p {
+		margin: 5px 15px;
+	}
+
+	.fa-brands,
+	.fa-solid {
+		font-size: 24px;
+		padding: 10px;
+	}
+
+	span {
+		font-size: 12px;
+	}
+}
+
+footer {
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #ddd;
+
+	span {
+		color: royalblue;
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+
+@media (min-width: 768px) {
+	.aboutus {
+		.row {
+			height: 100%;
+			justify-content: space-evenly;
+		}
+
+		.card {
+			margin-top: 0px;
+		}
+	}
+
+	.contact {
+		h2 {
+			font-size: 30px;
+		}
+
+		p {
+			font-size: 30px;
+		}
+
+		span {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 568px) {
+	.aboutus {
+		.row {
+			height: 100%;
+			justify-content: space-evenly;
+		}
+
+		.card {
+			margin-top: 0px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	nav {
+		.nav-menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.hamburger-menu {
+			display: none;
+		}
+
+		.nav-item {
+			display: block;
+		}
+	}
+
+	header {
+		.hero-image {
+			background-image: url('../img/mountain-big.jpg');
+		}
+	}
+
+	.aboutus {
+		height: 50vh;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+
+		.row {
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+	}
+	.contact {
+		flex-direction: row;
+		justify-content: space-around;
+
+		h2 {
+			font-size: 20px;
+		}
+		.social-media {
+			max-width: fit-content;
+		}
+	}
+}
